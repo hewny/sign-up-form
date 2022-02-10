@@ -1,5 +1,72 @@
+@font-face {
+  font-family: "norseBold";
+  src: url(./Norse-Bold.otf) format("opentype");
+}
+
 :root {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-container {
+  background-image: url(./halie-west-original.jpg);
+  background-size: cover;
+  width: 30%;
+  height: 100vh;
+}
+
+.left-container .logo-text {
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  top: 25vh;
+  width: 30%;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+}
+
+.left-container .logo-text span {
+  color: white;
+  font-family: "norseBold";
+  font-size: 5rem;
+  padding-top: 2vh;
+}
+
+.left-container .logo-text img {
+  height: 100%;
+}
+
+.logo-footer {
+  position: absolute;
+  bottom: 0;
+  width: 30%;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+
+.logo-footer a:link,
+.logo-footer a:visited {
+    color: white;
+
+}
+
+.right-container {
+  background-color: antiquewhite;
+  width: 70%;
+  height: 100vh;
 }
