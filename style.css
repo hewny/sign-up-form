@@ -3,7 +3,11 @@
   src: url(./Norse-Bold.otf) format("opentype");
 }
 
-:root {
+:root,
+div {
+  --green-theme: rgba(89, 109, 72, 1);
+  --right-background: rgba(255, 255, 238, 0.7);
+  --input-border: #e5e7eb;
   box-sizing: border-box;
 }
 
@@ -33,7 +37,7 @@ body {
   top: 25vh;
   width: 30%;
   height: 15vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
   padding: 1vh;
@@ -61,12 +65,108 @@ body {
 
 .logo-footer a:link,
 .logo-footer a:visited {
-    color: white;
-
+  color: white;
 }
 
 .right-container {
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  background-color: var(--right-background);
   width: 70%;
   height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right-container .header {
+  height: 20vh;
+  width: 100%;
+  padding-left: 3vw;
+  padding-right: 7vw;
+  font-size: 2rem;
+}
+
+.right-container .sign-up-form {
+  box-sizing: border-box;
+  height: 30vh;
+  width: 100%;
+  padding: 0 3vw;
+  background-color: var(--right-background);
+  font-size: 1.8rem;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.right-container .sign-up-form p {
+  margin: 2% 0;
+  height: 1rem;
+}
+
+.sign-up-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+  padding-right: 2vw;
+}
+
+.sign-up-inputs > div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2vw;
+  padding: 10px 0;
+  width: 40%;
+}
+
+.sign-up-inputs > div > input {
+  box-sizing: border-box;
+  border: 2px solid var(--input-border);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.sign-up-inputs > div > input:invalid {
+  border: 2px solid red;
+}
+.sign-up-inputs > div > input:invalid + span::after {
+  color: red;
+  content: "* Passwords do not match";
+  font-size: 1rem;
+}
+
+.sign-up-inputs label {
+  font-size: 1rem;
+  margin: 5px 0;
+  letter-spacing: 2px;
+}
+
+.right-container .sign-up-footer {
+  height: 10vh;
+  width: 100%;
+  margin-top: 3vh;
+  padding-left: 3vw;
+  font-size: 1.1rem;
+}
+
+.right-container .sign-up-footer button {
+  padding: 12px 50px;
+  background-color: var(--green-theme);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.right-container .sign-up-footer button:hover {
+  background-color: rgba(89, 109, 72, 0.8);
+}
+
+.sign-up-footer a:link,
+.sign-up-footer a:visited {
+  color: var(--green-theme);
+  font-weight: bold;
+  text-decoration: none;
 }
